@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import NameTag from './components/nameTag';
+import Input from './components/Input';
 
 function App() {
   
@@ -8,10 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="name title">Names List</h1>
-        <NameTag firstName="Peter" lastName="Monster">Peter</NameTag>
-        <NameTag firstName="Dude" lastName="Crabt">John</NameTag>
-        <NameTag firstName="Master" lastName="Worm">Mary</NameTag>        
+        <Input placeholder="Enter Here" type="text"></Input>
       </header>
     </div>
   );
