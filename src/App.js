@@ -1,7 +1,9 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import "./App.scss";
 
 function App() {
+  
+  // eslint-disable-next-line no-console
   return (
     <div className="App">
       <header className="App-header">
