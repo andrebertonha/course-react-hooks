@@ -1,28 +1,25 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Input from './components/Input';
+import NameTag from './components/nameTag';
 
-function App() {
-  
-  const [age, setAge] = useState(21);
+const initialNames = [
+  {firstName: "john", lastName: "johnson"},
+  {firstName: "peter", lastName: "peterson"},
+  {firstName: "jill", lastName: "jillson"},
+];
 
-  const ageUpHandle = () => {
-    setAge( age + 1 );
-  }
+function App() {  
 
-  const ageDownHandle = () => {
-    setAge( age -1 );
-  }
+  const [names, setNames] = useState(initialNames);
 
   // eslint-disable-next-line no-console
   return (
     <div className="App">
       <header className="App-header">
-        <Input placeholder="Enter Here" type="text"></Input>
-        <h1>Use State Hook</h1>
-        <h2>Age: {age}</h2>
-        <button onClick={ageUpHandle}>age up</button>
-        <button onClick={ageDownHandle}>age down</button>
+        <h1 className="name title">Names List</h1>
+        <NameTag firstName={names[0].firstName} lastName={names[0].lastName} />
+        <NameTag firstName={names[1].firstName} lastName={names[1].lastName} />
+        <NameTag firstName={names[2].firstName} lastName={names[2].lastName} />        
       </header>
     </div>
   );
